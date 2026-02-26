@@ -8,7 +8,7 @@
 <style>
 body{
 margin:0;
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
@@ -19,6 +19,9 @@ background-color:#1a1a1a;
 background-image:url('herringbone.svg');
 background-repeat:repeat;
 position:relative;
+padding:0 20px;
+box-sizing:border-box;
+text-align:center;
 }
 
 body::before{
@@ -36,12 +39,14 @@ z-index:0;
 body > *{
 position:relative;
 z-index:1;
+width:100%;
+max-width:900px;
 }
 
 header{
-margin-top:50px;
-font-size:2.2em;
-letter-spacing:2px;
+margin-top:6vh;
+font-size:clamp(1.4rem, 4vw, 2.2rem);
+letter-spacing:0.08em;
 }
 
 main{
@@ -52,20 +57,19 @@ align-items:center;
 }
 
 main h1{
-font-size:4.5em;
-letter-spacing:4px;
+font-size:clamp(2.2rem, 10vw, 4.5rem);
+letter-spacing:0.12em;
 margin:0;
 font-weight:normal;
 }
 
 footer{
-margin-bottom:25px;
-text-align:center;
-font-size:.7em;
+margin-bottom:4vh;
+font-size:clamp(0.65rem, 2.5vw, 0.8rem);
 line-height:1.6em;
 background:rgba(8,49,46,.35);
-padding:12px 0;
-width:100%;
+padding:14px 10px;
+border-radius:6px;
 }
 
 footer a{
@@ -91,7 +95,9 @@ TheScoreLoom™
 
 <footer>
 TheScoreLoom is a wind band score project founded by Luigi Bedin<br>
-Cavaso Del Tomba, Italy | <a href="mailto:info@thescoreloom.it">info@thescoreloom.it</a> | <a href="https://www.luigibedin.it" target="_blank">www.luigibedin.it</a>
+Cavaso Del Tomba, Italy | 
+<a href="mailto:info@thescoreloom.it">info@thescoreloom.it</a> | 
+<a href="https://www.luigibedin.it" target="_blank">www.luigibedin.it</a>
 </footer>
 
 </body>
