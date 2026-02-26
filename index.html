@@ -1,107 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thescoreloom</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      font-family: "Palatino Linotype", Palatino, serif;
-      color: #f0f0f0;
-
-      /* Sfondo con herringbone leggerissimo */
-      background-color: #1a1a1a;
-      background-image: url('herringbone.svg');
-      background-repeat: repeat;
-      background-size: auto;
-      position: relative;
-    }
-
-    /* Testo principale */
-    h1 {
-      font-size: 3em;
-      letter-spacing: 2px;
-      margin: 0.5em 0;
-    }
-
-    p {
-      font-size: 1.2em;
-      opacity: 0.8;
-    }
-
-    /* Overlay semi-trasparente */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: #08312e;
-      opacity: 0.93;
-      z-index: 0;
-    }
-
-    /* Mantieni contenuto sopra overlay */
-    body > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Footer elegante con fade-in */
-    footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.8em;
-      line-height: 1.4em;
-      color: #f0f0f0;
-      background: rgba(8, 49, 46, 0.5);
-      padding: 10px 0;
-      z-index: 2;
-      border-radius: 4px;
-
-      opacity: 0;
-      animation: fadeInFooter 2s ease-in forwards; /* fade-in in 2 secondi */
-    }
-
-    footer a {
-      color: #f0f0f0;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    footer .line2 {
-      margin-top: 4px;
-      font-size: 0.75em;
-      opacity: 0.85;
-    }
-
-    /* Animazione fade-in */
-    @keyframes fadeInFooter {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thescoreloom</title>
+<style>
+body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;font-family:"Palatino Linotype",Palatino,serif;color:#f0f0f0;background-color:#1a1a1a;background-image:url('herringbone.svg');background-repeat:repeat;background-size:auto;position:relative}h1{font-size:3em;letter-spacing:2px;margin:0.5em 0}p{font-size:1.2em;opacity:.8}body::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:#08312e;opacity:.93;z-index:0}body>*{position:relative;z-index:1}footer{position:absolute;bottom:20px;width:100%;text-align:center;font-size:.8em;line-height:1.4em;color:#f0f0f0;background:rgba(8,49,46,.5);padding:10px 0;z-index:2;border-radius:4px;opacity:0;animation:fadeInFooter 2s ease-in forwards}footer a{color:#f0f0f0;text-decoration:none}footer a:hover{text-decoration:underline}footer .line2{margin-top:4px;font-size:.75em;opacity:.85}@keyframes fadeInFooter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
 </head>
 <body>
-  <h1>Coming Soon</h1>
-  <p>Our musical scores and resources will be available shortly</p>
-
-  <footer>
-    <div>TheScoreLoom is a wind band score project founded by Luigi Bedin</div>
-    <div class="line2">
-      Cavaso Del Tomba, Italy | <a href="mailto:info@thescoreloom.it">info@thescoreloom.it</a> | <a href="https://www.luigibedin.it" target="_blank">www.luigibedin.it</a>
-    </div>
-  </footer>
+<h1>Coming Soon</h1>
+<p>Our musical scores and resources will be available shortly</p>
+<footer>
+<div>TheScoreLoom is a wind band score project founded by Luigi Bedin</div>
+<div class="line2">Cavaso Del Tomba, Italy | <a href="mailto:info@thescoreloom.it">info@thescoreloom.it</a> | <a href="https://www.luigibedin.it" target="_blank">www.luigibedin.it</a></div>
+</footer>
 </body>
 </html>
