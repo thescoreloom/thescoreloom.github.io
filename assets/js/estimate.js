@@ -1,34 +1,37 @@
-// --- PARAMETRI TESTATI ---
+const form = document.getElementById('quoteForm');
+const minutiInput = document.getElementById('minuti');
+const strumentiInput = document.getElementById('strumenti');
+const copyrightInput = document.getElementById('copyright');
+const totaleOutput = document.getElementById('totale');
+
+// --- PARAMETRI CALIBRATI SUI TUOI TARGET ---
 const BASE_FISSA = 15;      
 const MOLT_MINUTI = 18;     
-const PESO_STRUMENTI = 0.75; 
+const PESO_STRUMENTI = 0.75; // Fondamentale: strumenti * minuti * 0.75
 const COSTO_COPYRIGHT = 60; 
 const MINIMO_ASSOLUTO = 40; 
-const MARGINE = 0.35;       
+const MARGINE = 0.35;       // Forbice 35%
 
 function calcolaPreventivo() {
-  // Assicuriamoci che siano numeri puri
   const minuti = parseFloat(minutiInput.value) || 0;
   const strumenti = parseFloat(strumentiInput.value) || 0;
   const copyright = copyrightInput.checked ? COSTO_COPYRIGHT : 0;
 
-  // DEBUG: Decommenta la riga sotto se vuoi vedere i valori in console (F12)
-  // console.log(`Minuti: ${minuti}, Strumenti: ${strumenti}, Copyright: ${copyright}`);
+  // --- NUOVA FORMULA DINAMICA (Sostituisce la tua vecchia Math.pow) ---
+  // Ogni strumento pesa in base a quanto dura il brano, senza esplodere
+  let base = BASE_FISSA + (minuti * MOLT_MINUTI) + (strumenti * minuti * PESO_STRUMENTI) + copyright;
 
-  // Formula Dinamica
-  let calcoloBase = BASE_FISSA + (minuti * MOLT_MINUTI) + (strumenti * minuti * PESO_STRUMENTI) + copyright;
+  // Controllo minimo dignità
+  if (base < MINIMO_ASSOLUTO) base = MINIMO_ASSOLUTO;
 
-  // Se il calcolo fallisce o è troppo basso, usa il minimo
-  if (isNaN(calcoloBase) || calcoloBase < MINIMO_ASSOLUTO) {
-      calcoloBase = MINIMO_ASSOLUTO;
-  }
+  // Calcolo fascia ±35%
+  const minRange = Math.round(base * (1 - MARGINE));
+  const maxRange = Math.round(base * (1 + MARGINE));
 
-  const minRange = Math.round(calcoloBase * (1 - MARGINE));
-  const maxRange = Math.round(calcoloBase * (1 + MARGINE));
-
-  // AGGIORNAMENTO UI
+  // Visualizzazione
   totaleOutput.textContent = `€${minRange} – €${maxRange}`;
 }
 
-// Assicurati che gli eventi siano collegati correttamente
+// Eventi (manteniamo i tuoi originali)
 form.addEventListener('input', calcolaPreventivo);
+window.addEventListener('load', calcolaPreventivo);
