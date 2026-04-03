@@ -111,17 +111,41 @@ main.faq ul {
   .vertical-column text{
 justify-content: flex-start; /* contenuto in alto */
   }
+
+
+  aside.sidebar {
+    width: 100%;
+    align-items: center; /* Mantiene la centratura orizzontale */
+  }
+
+  aside.sidebar .vertical-column {
+    width: 100%;
+    max-width: 1000px; /* Allinea il limite a quello del main */
+  }
 /* sidebar anche lei row */
 
-aside.sidebar .chapter{
-flex-direction:row;
-gap:20px;
-align-items:center;
+aside.sidebar .chapter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    
+    /* AGGIUNGI QUESTE DUE RIGHE */
+    width: 100%;            /* Forza il capitolo a occupare tutto lo spazio */
+    
+  }
+  
+  aside.sidebar .chapter-text audio, 
+aside.sidebar .chapter-text iframe {
+  width: 100%;
+  min-width: 200px; /* Garanzia minima per i controlli audio */
 }
 
 aside.sidebar .chapter-image img {
-  max-width: clamp(200px, 10vw, 400px);
+  max-width: clamp(300px, 50vw, 600px);
+  display: block;
 }
+
 
 
 }

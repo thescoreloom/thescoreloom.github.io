@@ -1,5 +1,5 @@
 // -------------------------------
-// SIDEBAR DINAMICA: INTEGRAZIONE AUDIO/VIDEO
+// SIDEBAR DINAMICA: INTEGRAZIONE AUDIO/VIDEO + SCORE LINK
 // -------------------------------
 async function loadSidebar() {
   try {
@@ -18,11 +18,9 @@ async function loadSidebar() {
       const chapter = document.createElement('div');
       chapter.className = 'chapter';
 
-      // Logica multimediale: prioritizza YouTube, altrimenti mostra Audio
+      // 1. Logica multimediale: prioritizza YouTube, altrimenti mostra Audio
       let mediaHtml = '';
-      
       if (item.youtube && item.youtube.trim() !== "") {
-        // Caso VIDEO
         mediaHtml = accepted
           ? `<iframe src="${item.youtube}" class="youtube-preview" allowfullscreen></iframe>`
           : `<div class="youtube-cookie-banner">
@@ -30,7 +28,6 @@ async function loadSidebar() {
                <button class="btn-accept-cookies">Accept</button>
              </div>`;
       } else if (item.audio && item.audio.trim() !== "") {
-        // Caso AUDIO (Mini Player)
         mediaHtml = `
           <audio controls class="mini-audio-player" style="width: 100%; height: 32px;">
             <source src="${item.audio}" type="audio/mpeg">
@@ -38,14 +35,24 @@ async function loadSidebar() {
           </audio>`;
       }
 
-      // Utilizzo ESATTO delle tue classi originali
+      // 2. Logica Link Partitura: se esiste scoreLink, rendi l'immagine cliccabile
+      let imageHtml = `<img src="${item.image}" alt="${item.title}">`;
+      if (item.scoreLink && item.scoreLink.trim() !== "") {
+        imageHtml = `
+          <a href="${item.scoreLink}" target="_blank" title="Buy / View Full Score">
+            ${imageHtml}
+            <div class="score-overlay"><span>🛒 View Score</span></div>
+          </a>`;
+      }
+
+      // 3. Render finale
       chapter.innerHTML = `
         <div class="vertical-column">
           <h3>${item.title}</h3>
 
           <div class="chapter">
             <div class="chapter-image">
-              <img src="${item.image}" alt="${item.title}">
+              ${imageHtml}
             </div>
             <div class="chapter-text">
               ${mediaHtml}
@@ -57,7 +64,7 @@ async function loadSidebar() {
       sidebar.appendChild(chapter);
     });
 
-    // Listener per i pulsanti "Accept" (rimane invariato)
+    // Listener per i pulsanti "Accept"
     sidebar.querySelectorAll('.btn-accept-cookies').forEach(btn => {
       btn.addEventListener('click', () => {
         localStorage.setItem('youtubeCookiesAccepted', 'true');

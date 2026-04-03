@@ -177,7 +177,7 @@ main, aside.sidebar {
   height: auto;
   object-fit: contain;
   margin: 0 auto;
-  max-width: clamp(80px, 80vw, 400px); /* mobile-first */
+  max-width: clamp(80px, 90vw, 400px); /* mobile-first */
 }
 
 .chapter-title{
@@ -512,6 +512,8 @@ main .chapter-video,
     max-width: calc(50% - 5vw); /* lascia metà meno metà gap */
     box-sizing: border-box;
   }
+
+
   
 /* Nav centrata */
 header nav {
