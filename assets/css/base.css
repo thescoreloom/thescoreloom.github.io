@@ -149,6 +149,7 @@ main, aside.sidebar {
   padding: 5vh;
 }
 
+
 /* Chapter e vertical-column centrati e limitati */
 .chapter, .vertical-column {
   display: flex;
