@@ -1,6 +1,6 @@
 (async () => {
   try {
-    const response = await fetch('assets/data/background-settings.json');
+    const response = await fetch('../assets/data/background-settings.json');
     const data = await response.json();
 
     const page = document.body.dataset.page;

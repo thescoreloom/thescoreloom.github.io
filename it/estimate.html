@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TheScoreLoom – Preventivo | Spartiti su Misura</title>
+  <meta name="description" content="Calcola il prezzo per uno spartito su misura o un arrangiamento personalizzato per banda musicale su TheScoreLoom.">
+  <meta name="keywords" content="spartito su misura, arrangiamento banda personalizzato, preventivo prezzo, quotazione">
+
+  <link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/estimate.html" />
+  <link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/estimate.html" />
+  <link rel="canonical" href="https://thescoreloom.it/it/estimate.html">
+
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/utilities.css">
+
+  <style>
+    /* Forza la colonna per il capitolo estimate su tutti i dispositivi */
+    .chapter.estimate {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .chapter.estimate .chapter-image,
+    .chapter.estimate .chapter-text {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body data-page="Estimate">
+    <div class="background-parallax"></div>
+    <div id="dot-menu-trigger" class="dot-trigger"></div>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="../assets/images/logo.png" alt="TheScoreLoom Logo">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="project.html">Progetto</a></li>
+      <li><a href="scores.html">Spartiti</a></li>
+      <li><a href="estimate.html" class="active">Preventivo</a></li>
+      <li><a href="contact.html">Contatti</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li class="lang-switch"><a href="../en/index.html">EN</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="content-wrapper">
+
+  <div class="cimosa">
+    <span id="chapter-title">Preventivo</span>
+  </div>
+
+  <main class="vertical-column">
+    <h1>Calcola il tuo spartito su misura</h1>
+  <div class="chapter">
+    <div class="vertical-column">
+      <h2>Stima il tuo Spartito</h2>
+
+      Inserisci la durata e il numero di strumenti diversi che compongono il tuo organico per ottenere un prezzo indicativo per uno spartito su misura. Nota bene: questo prezzo è puramente indicativo e non costituisce un'offerta vincolante. Il prezzo include le tasse.
+    <form id="quoteForm">
+
+      <label>
+        Durata (minuti):
+        <input type="number" id="minuti" min="1" value="3">
+      </label>
+
+      <label>
+        Numero di strumenti:
+        <input type="number" id="strumenti" min="1" value="20">
+      </label>
+
+      <label>
+        <input type="checkbox" id="copyright" checked>
+        Seleziona se il brano da arrangiare è coperto da copyright
+      </label>
+
+      <div>
+        <strong>Totale stimato:</strong>
+        <span id="totale">50</span>€
+      </div>
+    </form>
+      
+    </div>
+    
+      <div class="vertical-column">
+        <h2>Dettaglio dei Costi</h2>
+        <p>Gli arrangiamenti personalizzati (Tailored) comprendono due componenti:</p>
+        <h3>Consulenza Professionale:</h3>
+        <p>una quota che copre l'analisi del tuo ensemble, la valutazione dei punti di forza e dei limiti tecnici, lo sviluppo del piano di arrangiamento e tre mesi di piccole modifiche interne e guida all'esecuzione per ottimizzare la resa sonora del tuo gruppo.</p>
+        <h3>Costo della Licenza:</h3>
+        <p>un pagamento separato richiesto solo per i brani sotto copyright, elaborato tramite Hal Leonard o altri canali autorizzati. L'ensemble riceve l'arrangiamento esclusivamente tramite piattaforme ufficiali.</p>
+        </div>
+        </div>
+        <div class="continue-nav">
+            <a href="scores.html" class="continue-btn">← Indietro</a>
+            <a id="requestScoreBtn" class="continue-btn">Scopri di più →</a>
+            </div>
+  </main>
+
+  <aside class="sidebar">
+    <h1 class="sidebar-title">Novità</h1>
+    <div id="sidebar" class="youtube-previews"></div>
+  </aside>
+
+</div>
+
+ <footer>
+    <p>© 2026 TheScoreLoom™ - fondato da Luigi Bedin</p>
+    <p>Cavaso del Tomba, Italia | info@thescoreloom.it</p>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="cookies.html">Cookies Policy</a> |
+      <a href="terms.html">Termini di Vendita</a> |
+      <a href="contact.html">Contatti</a>
+    </nav>
+  </footer>
+
+  <a id="whatsapp-link" class="whatsapp-float" target="_blank" rel="noopener">
+  <img src="../assets/images/whatsapp.png" alt="Contatto WhatsApp">
+  </a>
+
+  <script src="../assets/js/whatsapp-nr.js"></script>
+<script src="../assets/js/sidebar.js" defer></script>
+<script src="../assets/js/cimosa.js" defer></script>
+<script src="../assets/js/parallax.js" defer></script>
+<script src="../assets/js/hamburger.js" defer></script>
+<script src="../assets/js/estimate.js" defer></script>
+<script src="../assets/js/quote-to-contact.js" defer></script>
+
+</body>
+</html>

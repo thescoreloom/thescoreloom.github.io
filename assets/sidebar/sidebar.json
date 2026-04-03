@@ -1,22 +1,22 @@
 [
   {
     "title": "ARRIVAL OF THE BIRDS",
-    "image": "assets/sidebar/ARRIVAL_OF_THE_BIRDS.png",
-    "audio": "assets/sidebar/ARRIVAL_OF_THE_BIRDS.mp3",
+    "image": "../assets/sidebar/ARRIVAL_OF_THE_BIRDS.png",
+    "audio": "../assets/sidebar/ARRIVAL_OF_THE_BIRDS.mp3",
     "youtube": "",
     "scoreLink": "https://www.sheetmusicdirect.com/se/ID_No/1975106/Product.aspx"
   },
   {
     "title": "MATTI",
-    "image": "assets/sidebar/MATTI.png",
-    "audio": "assets/sidebar/MATTI.mp3",
+    "image": "../assets/sidebar/MATTI.png",
+    "audio": "../assets/sidebar/MATTI.mp3",
     "youtube": "",
     "scoreLink": "https://www.sheetmusicdirect.com/se/ID_No/1974110/Product.aspx"
   },
   {
     "title": "TENNESSEE",
-    "image": "assets/sidebar/TENNESSEE.png",
-    "audio": "assets/sidebar/TENNESSEE.mp3",
+    "image": "../assets/sidebar/TENNESSEE.png",
+    "audio": "../assets/sidebar/TENNESSEE.mp3",
     "youtube": "",
     "scoreLink": "https://www.sheetmusicdirect.com/se/ID_No/1975175/Product.aspx"
   }

@@ -11,6 +11,52 @@ header {
   z-index: 2; /* sopra cimosa */
 }
 
+/* Stato: NASCOSTO (quando scrolli giù) */
+header.nav-hidden {
+  transform: translateY(-100%);
+}
+
+/* Stato: RICHIAMATO (quando clicchi il dot) */
+/* Usiamo la doppia classe per vincere sulla precedente */
+header.nav-hidden.nav-visible {
+  transform: translateY(0) !important;
+}
+
+header nav.active {
+  display: flex !important; /* Mostra i link */
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Il DOT che compare allo scroll */
+#dot-menu-trigger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  /* Rimpicciolito: 18px invece di 22-25px */
+  width: 18px;
+  height: 18px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  z-index: 10000;
+  cursor: pointer;
+  
+  /* Stato Default */
+  opacity: 0;
+  visibility: hidden;
+  /* Aggiunta transizione per il transform per l'hover */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease-in-out, background-color 0.2s ease;
+}
+
+#dot-menu-trigger.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#dot-menu-trigger:active {
+  transform: scale(0.9);
+}
+
 .whatsapp-float{
   position: fixed;
   right: 20px;
@@ -50,6 +96,13 @@ header a.logo img {
   height: auto;
   display: block;
 }
+
+#dot-menu-trigger:hover {
+    /* Si ingrandisce leggermente e cambia colore o luminosità */
+    transform: scale(1.2);
+    background-color: var(--accent-hover, #d4753d); /* Se non hai la variabile, usa un colore leggermente più chiaro/scuro */
+    box-shadow: 0 0 12px var(--accent); /* Un leggero bagliore */
+  }
 
 /* Loghi bande */
 .band-logos {
@@ -91,19 +144,6 @@ header a.logo img {
 }
 /* NAV */
 
-.hamburger span.active-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--accent);
-  display: block;
-}
-
-
-header nav a:hover,
-header nav a.active {
-  color: var(--accent-hover);
-}
 
 /* ============================= */
 /* SIDEBAR                       */

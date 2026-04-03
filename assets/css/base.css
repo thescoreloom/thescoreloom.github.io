@@ -112,11 +112,26 @@ body {
   color: var(--text-main);
 }
 
-header,
+
+/* Header SEMPRE fisso in alto */
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--bg-header);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.3s ease;
+}
+
+
 footer{
 position:relative;
 z-index:2;
 }
+
+
 
 header { background-color: var(--bg-header); color: var(--text-main); }
 footer { background-color: var(--bg-footer); color: var(--text-dim); }
@@ -142,24 +157,16 @@ aside.sidebar { background-color: var(--bg-sidebar); color: var(--text-bar); }
 main, aside.sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;   /* centra orizzontalmente */
   justify-content: flex-start;
-  overflow: hidden;
+  overflow: hidden;      /* evita che qualcosa esca fuori */
+  gap: 5vh;
   padding: 5vh;
 }
-
-/* Spazio specifico per i Chapter nel MAIN */
-main {
-  gap: var(--chapter-gap); /* Qui userà i 20vh che hai messo nel :root */
-}
-
-/* Spazio specifico per gli elementi nella SIDEBAR */
-aside.sidebar {
-  gap: 20px; /* Qui metti uno spazio piccolo (es. 20px) per tenerli compatti */
-}
-
 aside.sidebar .vertical-column{
+
   margin-bottom: 50px;
+
 }
 
 /* Chapter e vertical-column centrati e limitati */
@@ -172,7 +179,7 @@ aside.sidebar .vertical-column{
   width: 100%;
   max-width: 100%; /* 80% su mobile, max 400px */
   margin: 0 auto;
-  gap: 20px;
+  gap: 5px;
   overflow: hidden;
   box-sizing: border-box;
   object-fit: contain;
@@ -190,7 +197,7 @@ aside.sidebar .vertical-column{
   height: auto;
   object-fit: contain;
   margin: 0 auto;
-  max-width: clamp(80px, 90vw, 400px); /* mobile-first */
+  max-width: clamp(80px, 80vw, 400px); /* mobile-first */
 }
 
 .chapter-title{
@@ -525,8 +532,6 @@ main .chapter-video,
     max-width: calc(50% - 5vw); /* lascia metà meno metà gap */
     box-sizing: border-box;
   }
-
-
   
 /* Nav centrata */
 header nav {

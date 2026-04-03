@@ -1,6 +1,6 @@
 async function loadSidebar() {
   try {
-    const response = await fetch('assets/sidebar/sidebar.json'); 
+    const response = await fetch('../assets/sidebar/sidebar.json'); 
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     const data = await response.json();
