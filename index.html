@@ -1,139 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TheScoreLoom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-/* Body e sfondo */
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  align-items:center;
-  font-family:"Palatino Linotype", Palatino, serif;
-  color:#f2f2f2;
-  background-color:#1a1a1a;
-  background-image:url('herringbone.svg');
-  background-repeat:repeat;
-  background-size:auto;
-  position:relative;
-  padding:0 20px;
-  box-sizing:border-box;
-  text-align:center;
-}
+  <!-- Titolo SEO -->
+  <title>TheScoreLoom – Home | Sheet Music & Music Projects</title>
 
-body::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#08312e;
-  opacity:.92;
-  z-index:0;
-}
+  <!-- Meta description SEO -->
+  <meta name="description" content="TheScoreLoom provides versatile sheet music for wind bands, including arrangements for both standard and unusual instrumentations. Each score is designed to make the most of mixed skill levels within the ensemble, ensuring balanced and effective performances.">
 
-/* Contenitori principali */
-body > * {
-  position: relative;
-  z-index:1;
-  width: 100%;
-  max-width: 900px;
-}
+  <!-- Meta keywords -->
+  <meta name="keywords" content="wind band sheet music, custom ensembles, mixed skill levels, Ready-to-Play, Tailored scores, Bespoke scores, TheScoreLoom">
 
-/* Header */
-header{
-  margin-top:6vh;
-  font-size:clamp(1.4rem, 4vw, 2.2rem);
-  letter-spacing:0.08em;
-}
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
 
-/* Main con logo e scritta */
-main{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:20px;
-}
-
-main img.logo{
-  width:480px;
-  max-width:80vw; /* responsive */
-  height:auto;
-}
-
-main h1{
-  font-size:clamp(2.5rem, 10vw, 4.8rem);
-  letter-spacing:0.12em;
-  margin:0;
-  font-weight:normal;
-  opacity:0.6;
-  margin-top:20px; /* leggero distanziamento dal logo */
-}
-
-/* Footer */
-footer{
-  margin-bottom:3vh;
-  text-align:center;
-  font-size:clamp(0.5rem, 1.8vw, 0.6rem);
-  line-height:1.3em;
-  background:rgba(8,49,46,.35);
-  padding:8px 7px;
-  width:100%;
-}
-
-footer .line{
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-footer .copyright{
-  opacity:0.7;
-}
-
-footer a{
-  color:#f2f2f2;
-  text-decoration:none;
-}
-
-footer a:hover{
-  text-decoration:underline;
-}
-</style>
+  <!-- CSS modulari -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
 
 </head>
-<body>
+<body data-page="Home">
+  <div class="background-parallax"></div>
 
-<header>
-  TheScoreLoom™
-</header>
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="TheScoreLoom Logo">
+    </a>
+    <nav>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="scores.html">Scores</a></li>
+    <li><a href="estimate.html">Estimate</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+</nav>
+  </header>
 
-<main>
-  <img src="logo 480.png" alt="TheScoreLoom Logo" class="logo">
-  <h1>Coming Soon</h1>
+  <!-- CONTENITORE PRINCIPALE -->
+  <div class="content-wrapper">
+
+    <!-- CIMOSA SINISTRA -->
+    <div class="cimosa">
+      <span id="chapter-title">Home</span>
+    </div>
+
+    <!-- MAIN -->
+   <main>
+
+    <!-- CHAPTER 1: HERO + LOGHI -->
+  
+
+    <!-- Logo -->
+    <div>
+      
+       <div class="hero">
+        <h1>TheScoreLoom™ - Wind Band Arrangements</h1>
+        <h2>20 Years Weaving Scores for Real Musicians</h2>
+        <h3>Every ensemble has its own voice</h3>
+       </div>
+      
+
+      <div class="chapter no-reverse">   
+        <!-- Testo + Bottoni + Loghi bande -->
+        <div class="vertical-column">
+        
+          <!-- Loghi bande -->
+        <div> <h3>Here are a few of them</h3> </div>
+        <div class="band-logos">
+        <div class="band-logo-container">
+        <img src="assets/images/bands/BMP - logo.png" alt="Band Logo 1">
+        </div>
+        <div class="band-logo-container">
+        <img src="assets/images/bands/Montebelluna - logo.jpg" alt="Band Logo 2">
+        </div>
+        <div class="band-logo-container">
+        <img src="assets/images/bands/Cornuda - logo.jpg" alt="Band Logo 3">
+        </div>
+        </div>
+        <div class="continue-nav">
+        <a href="contact.html" class="continue-btn">Contact</a>
+        <a href="project.html" class="continue-btn">More →</a>
+        </div>
+
+        
+      </div>
+
+      <div class="chapter-logo">
+         <img src="assets/images/logo.png" alt="Band Scores">
+       </div>
+  
+     </div>
+
+    
+  </div>
+  
+
+  <!-- CHAPTER 2: WHO THE SCORE LOOM SERVES -->
+  <div class="chapter">
+
+    <!-- Testo -->
+    <div class="chapter-text">
+    <h2>Who TheScoreLoom serves</h2>
+
+<p><strong>Conductors</strong> noticing empty parts</p>
+
+<p>Those who <strong>adapt music</strong> to their ensemble</p>
+
+<p>Those who <strong>empower weaker musicians</strong></p>
+
+<p>Those who <strong>reward the skilled ones</strong></p> 
+    
+    </div>
+
+     <!-- Placeholder video -->
+    <div class="chapter-image">
+  <img src="assets/images/home_temp_1.png" alt="Flexible wind band ensemble sheet music – TheScoreLoom">
+</div>
+
+  </div>
+
+  <!-- CHAPTER 3: HOW A SCORE IS CRAFTED -->
+  <div class="chapter">
+
+    <!-- Testo -->
+    <div class="chapter-text">
+
+<h2>How a score is crafted</h2>
+
+<p><strong>Ensemble:</strong> strengths, weaknesses, seating layout</p>
+
+<p><strong>Rhythm:</strong> adapted to skills and seating</p>
+
+<p><strong>Balance:</strong> voices distributed by number and timbre</p>
+
+<p><strong>Variety:</strong> new combinations to engage all</p>
+
+<p><strong>Optional parts:</strong> for weaker musicians or substitutions</p>
+
+    </div>
+
+    <!-- Placeholder video -->
+    <div class="chapter-image">
+  <img src="assets/images/home_temp_2.png" alt="Custom wind band arrangement showing instruments and layout – TheScoreLoom">
+</div>
+
+  </div>
+
+  <!-- CHAPTER 4: assistenza post vendita -->
+   
+  <div class="chapter">
+
+    <!-- Testo -->
+    <div class="chapter-text">
+      <h2>Post-purchase support included</h2>
+      <p>with Tailored arrangements we offer 3 months of minor internal adjustments and notation checks</p>
+      <p>If you have doubts about custom scores, revisions, or licenses, please check our <a href="faq.html">FAQ page</a>.</p>
+    </div>
+    <div class="chapter-image">
+      <img src="assets/images/Assistenza-post-vendita.png" alt="Post Sale Support">
+    </div>
+
+  
+  
+  </div>
+
+  <!-- CHAPTER 5: CTA FINALE -->
+<div class="continue-nav">
+    <a href="contact.html" class="continue-btn">
+    Contact
+  </a>
+  <a href="project.html" class="continue-btn">
+    More →
+  </a>
+
+</div>
+
 </main>
 
-<footer>
-  <div class="line">
-    TheScoreLoom is a wind band score project founded by Luigi Bedin
+    <!-- SIDEBAR DESTRA -->
+    <aside class="sidebar">
+    <h1 class="sidebar-title">New Scores</h1>
+    <div id="sidebar" class="youtube-previews"></div>
+    </aside>
+
   </div>
-  <div class="line">
-    Cavaso Del Tomba, Italy | 
-    <a href="mailto:info@thescoreloom.it">info@thescoreloom.it</a> | 
-    <a href="https://www.luigibedin.it" target="_blank">www.luigibedin.it</a>
-  </div>
-  <div class="copyright">
-    © 2026 TheScoreLoom™ — Luigi Bedin
-  </div>
-</footer>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 TheScoreLoom™ - founded by Luigi Bedin</p>
+    <p>Cavaso del Tomba, Italy | info@thescoreloom.it</p>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="cookies.html">Cookies Policy</a> |
+      <a href="terms.html">Terms of Sale</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </footer>
+
+  <a id="whatsapp-link" class="whatsapp-float" target="_blank" rel="noopener">
+  <img src="assets/images/whatsapp.png" alt="WhatsApp contact">
+  </a>
+
+  <script src="assets/js/whatsapp-nr.js"></script>
+  <script src="assets/js/sidebar.js" defer></script>
+  <script src="assets/js/cimosa.js" defer></script>
+  <script src="assets/js/parallax.js" defer></script>
+  <script src="assets/js/hamburger.js" defer></script>
+
 
 </body>
 </html>

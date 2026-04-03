@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TheScoreLoom – Estimate | Tailored Scores</title>
+  <meta name="description" content="Estimate the price for a tailored score or custom wind band arrangement at TheScoreLoom.">
+  <meta name="keywords" content="Tilored score, custom wind band arrangement, price estimate, quote">
+
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+  <!-- CSS modulari -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+
+  <style>
+    /* Forza la colonna per il capitolo estimate su tutti i dispositivi */
+    .chapter.estimate {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.chapter.estimate .chapter-image,
+.chapter.estimate .chapter-text {
+  width: 100%;
+  max-width: 600px;
+}
+  </style>
+</head>
+<body data-page="Estimate">
+    <div class="background-parallax"></div>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo.png" alt="TheScoreLoom Logo">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="scores.html">Scores</a></li>
+      <li><a href="estimate.html" class="active">Estimate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="content-wrapper">
+
+  <!-- CIMOSA SINISTRA -->
+  <div class="cimosa">
+    <span id="chapter-title">Estimate</span>
+  </div>
+
+  <!-- MAIN -->
+  <main class="vertical-column">
+    <h1>Estimate yor Tailored Score</h1>
+  <div class="chapter">
+    <div class="vertical-column">
+      <h2>Estimate Your Score</h2>
+
+      Enter the duration and number of instruments to get an indicative price for a tailored score. Please note that this price is indicative and does not constitute a binding offer. The price includes taxes.
+    <form id="quoteForm">
+
+      <label>
+        Duration (minutes):
+        <input type="number" id="minuti" min="1" value="3">
+      </label>
+
+      <label>
+        Number of instruments:
+       <input type="number" id="strumenti" min="1" value="1">
+     </label>
+
+      <label>
+       <input type="checkbox" id="copyright" checked>
+        Select if the piece to be arranged is under copyright
+     </label>
+
+     <div>
+        <strong>Estimated total:</strong>
+        <span id="totale">50</span>€
+      </div>
+    </form>
+      
+      
+    </div>
+    
+      <div class="vertical-column">
+        <h2>Pricing Breakdown</h2>
+        <p>Tailored arrangements involve two components:</p>
+        <h3>Professional Consultation Fee:</h3>
+        <p>a fixed fee covering analysis of your ensemble, assessment of strengths and limitations, development of the arrangement plan and three months of minor internal adjustments and performance guidance to optimize execution for your ensemble.</p>
+        <h3>Licensed Score Cost:</h3>
+        <p>a separate payment only for the scores under copyright, processed through Hal Leonard or other authorized channels. The ensemble receives the arrangement only via official platforms.</p>
+        </div>
+        </div>
+        <div class="continue-nav">
+            <a href="scores.html" class="continue-btn">← Back</a>
+            <a id="requestScoreBtn" class="continue-btn">Learn more →</a>
+            </div>
+  </main>
+
+  <!-- SIDEBAR DESTRA -->
+  <aside class="sidebar">
+    <h1 class="sidebar-title">New Scores</h1>
+    <div id="sidebar" class="youtube-previews"></div>
+  </aside>
+
+</div>
+
+ <footer>
+    <p>© 2026 TheScoreLoom™ - founded by Luigi Bedin</p>
+    <p>Cavaso del Tomba, Italy | info@thescoreloom.it</p>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="cookies.html">Cookies Policy</a> |
+      <a href="terms.html">Terms of Sale</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </footer>
+
+  <a id="whatsapp-link" class="whatsapp-float" target="_blank" rel="noopener">
+  <img src="assets/images/whatsapp.png" alt="WhatsApp contact">
+  </a>
+
+  <script src="assets/js/whatsapp-nr.js"></script>
+<script src="assets/js/sidebar.js" defer></script>
+<script src="assets/js/cimosa.js" defer></script>
+<script src="assets/js/parallax.js" defer></script>
+<script src="assets/js/hamburger.js" defer></script>
+<script src="assets/js/estimate.js" defer></script>
+<script src="assets/js/quote-to-contact.js" defer></script>
+
+</body>
+</html>

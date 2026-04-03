@@ -1,0 +1,9 @@
+{
+  "Privacy":   { "scale": 10,  "speed": 1 },
+  "Cookies":   { "scale": 12,  "speed": 3 },
+  "Home":      { "scale": 15,  "speed": 5 },
+  "Project":   { "scale": 18,  "speed": 8 },
+  "Scores":    { "scale": 25,  "speed": 10 },
+  "Estimate":  { "scale": 32,  "speed": 15 },
+  "Contact":   { "scale": 50, "speed": 20 }
+}

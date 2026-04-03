@@ -1,0 +1,229 @@
+main.legal {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* distanza verticale tra i capitoli */
+}
+
+main.legal.chapter,
+main.legal section {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;  /* allineamento a sinistra */
+  margin: 0;
+  padding: 0 1rem;   /* un po’ di padding interno */
+  box-sizing: border-box;
+}
+
+main.legal h1,
+main.legal h2,
+main.legal h3,
+main.legal p,
+main.legal ul {
+  width: 100%;
+  text-align: left;
+  margin: 0 0 1rem 0; /* margine inferiore per separare i paragrafi */
+}
+
+main.faq ul {
+  padding-left: 1.5rem; /* rientro liste */
+}
+
+
+/* ============================= */
+/* TABLET                        */
+/* ============================= */
+
+
+
+@media (min-width:768px){
+
+
+
+  nav ul {
+    flex-direction: row;       /* mette le voci in riga */
+    justify-content: flex-end; /* spinge a destra */
+    align-items: center;       /* centra verticalmente */
+    gap: var(--nav-gap);       /* distanza tra voci */
+  }
+
+  nav ul li a {
+    padding-left: 0;
+    padding-right: var(--nav-link-padding);
+  }
+
+  nav ul li a.active::after {
+    left: 50%;
+    bottom: var(--nav-dot-bottom, 6px);
+    transform: translateX(-50%);
+  }
+
+  main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--chapter-gap, 5vh); /* qui si gestisce la distanza verticale tra i chapter */
+  
+  
+}
+
+    
+.chapter {
+    flex-direction: row;
+    
+    align-items: center;
+    box-sizing: border-box;
+    
+    
+  }
+
+  
+
+  .chapter-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .chapter-text {
+               /* prende lo spazio disponibile */
+    max-width: 600px;            /* evita che diventi troppo largo */
+    padding: 1rem;               /* padding interno per non spiaccicare testo */
+    text-align: left;
+  }
+
+  .chapter-image {
+                 /* dimensione basata sull'immagine */
+    max-width: 400px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* opzionale: alterna zigzag per le righe pari */
+  .chapter:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .chapter .vertical-column {
+    align-items: center;     /* contenuto in alto, testo a sinistra */
+    padding: 0.5rem;
+  }
+  .vertical-column text{
+justify-content: flex-start; /* contenuto in alto */
+  }
+/* sidebar anche lei row */
+
+aside.sidebar .chapter{
+flex-direction:row;
+gap:20px;
+align-items:center;
+}
+
+aside.sidebar .chapter-image img {
+  max-width: clamp(200px, 10vw, 400px);
+}
+
+
+}
+
+/* ============================= */
+/* DESKTOP                       */
+/* ============================= */
+
+
+@media (min-width:1200px){
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr 0.5fr; 
+    grid-template-areas: ". main sidebar .";
+    gap: var(--content-gap);
+}
+
+  
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: var(--chapter-gap);
+    position: relative;      /* riferimento per sidebar sticky */
+ }
+
+  aside.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background: var(--bg-sidebar);
+    color: var(--text-main);
+
+    max-height: 100%;        /* altezza massima relativa al grid container */
+    overflow-y: auto;        /* scroll se troppo lungo */
+    position: sticky;        /* rimane “ancorata” al top del main */
+    top: 0;                  /* inizia allineata al top del main */
+  }
+aside.sidebar .chapter{
+flex-direction:column;
+align-items:center;
+gap:10px;
+}
+
+aside.sidebar .chapter img,
+aside.sidebar .chapter iframe{
+width:var(--sidebar-item-width-percent);
+height:auto;
+object-fit:contain;
+}
+
+.chapter {
+    display: flex;
+    flex-direction: row;          /* alternanza row / row-reverse per zigzag */
+    justify-content: center;      /* centra il gruppo nel main */
+    align-items: center;          /* centra verticalmente */
+    gap: 10vw;                    /* spazio centrale “vuoto” */
+    width: auto;                  /* chapter largo quanto il contenuto + gap */
+    margin: 0 0;               /* centra chapter */
+  }
+
+  .chapter-text,
+  .chapter-image {
+    flex: 0 0 auto;               /* larghezza naturale, non si espande */
+    max-width: 600px;             /* testo */
+    text-align: center;           /* centra testo internamente */
+  }
+
+  .chapter-image img {
+    width: auto;                  /* mantiene proporzioni naturali */
+    max-width: 300px;             /* immagine */
+    height: auto;
+    display: block;
+  }
+
+}
+/*
+@media (min-width: 1920px) {
+    .content-wrapper {
+    display: grid;
+    grid-template-columns: 01fr 3fr 1fr 1fr; 
+    grid-template-areas: "empty main sidebar empty2";
+    gap: var(--content-gap);
+}
+
+
+.content-wrapper::before,
+.content-wrapper::after {
+    content: "";
+    display: block;
+}
+}*/
+
+
+
+
+
+
+
+
+

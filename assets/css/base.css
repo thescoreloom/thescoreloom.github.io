@@ -1,0 +1,560 @@
+
+
+  :root {
+  --font-main: "Palatino Linotype", serif;
+  --fs-body: 1rem;
+  --fs-cimosa: 0.7rem;
+  
+  
+  --content-gap: 0px;
+  --content-padding: 1px;
+  --chapter-gap: 20vh; /* aumenta la distanza verticale tra i chapter */
+
+
+  --h1-size: 2rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.2rem;
+  
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+
+  --hero-brand-size: 0.8rem;
+  --hero-title-size: 2rem;
+  --hero-brand-weight: 300;
+  --hero-title-weight: 600;
+
+  --hero-brand-size-L: 1.2rem;
+  --hero-title-size-L: 3rem;
+  --hero-brand-weight-L: 350;
+  --hero-title-weight-L: 700;
+
+  --hero-brand-size-XL: 1.5rem;
+  --hero-title-size-XL: 3.5rem;
+  --hero-brand-weight-XL: 300;
+  --hero-title-weight-XL: 800;
+  
+  --accent: #c4652d;
+  --accent-hover: rgba(196,101,45,0.8);
+  --cimosa-color: rgba(196,101,45,0.6);
+  --heading-color: #f2f2f2;
+  --text-main: #f2f2f2;
+  --text-contrast: #1a1a1a;
+  --text-dim: rgba(242,242,242,0.6);
+  --text-bar: #1a1a1a;
+  --bg-body: #2a2a2a;
+  --bg-overlay: rgba(8,49,46,0.88);  /* overlay semitrasparente */
+  --bg-main: rgba(8,49,46,0);        /* main trasparente per vedere pattern */
+  --bg-header: rgba(8,49,46,0.85);
+  --bg-footer: rgba(8,49,46,0.85);
+  --bg-sidebar: rgba(8,49,46,0.5);
+  --bg-cookie-banner: rgba(8,49,46,0.85);
+  --border-color: rgba(242,242,242,0.1);
+
+  --logo-width: 50px;
+  --nav-dot-bottom: 12px;
+  --cimosa-width: calc(0.65 * var(--fs-cimosa) + 2 * 0.1rem);
+  --nav-gap: 20px;
+  --nav-link-padding: 12px;
+
+  --sidebar-item-width-percent: 100%;
+}
+/* ============================= */
+/* RESET                         */
+/* ============================= */
+
+*,
+*::before,
+*::after{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+min-height:100vh;
+font-family:var(--font-main);
+font-size:var(--fs-body);
+color:var(--text-main);
+line-height:1.6;
+
+}
+
+/* ============================= */
+/* BACKGROUND PARALLAX           */
+/* ============================= */
+
+.background-parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/herringbone.svg");
+  background-repeat: repeat;
+  background-size: 200%; /* scala pattern */
+  z-index: -3; /* sotto overlay e contenuto */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-overlay); /* semitrasparente */
+  pointer-events: none;
+  z-index: -2; /* sopra pattern ma sotto contenuto */
+}
+
+body {
+  background-color: var(--bg-body); /* base della tua palette */
+  color: var(--text-main);
+}
+
+header,
+footer{
+position:relative;
+z-index:2;
+}
+
+header { background-color: var(--bg-header); color: var(--text-main); }
+footer { background-color: var(--bg-footer); color: var(--text-dim); }
+aside.sidebar { background-color: var(--bg-sidebar); color: var(--text-bar); }
+
+
+/* ============================= */
+/* CONTENT WRAPPER               */
+/* ============================= */
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: solo colonna */
+  gap: var(--content-gap);
+  padding: var(--content-padding);
+  padding-left: calc(var(--cimosa-width) * 3); /* offset cimosa */
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* niente fuoriuscite */
+}
+
+/* ===== Main e Sidebar ===== */
+main, aside.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra orizzontalmente */
+  justify-content: flex-start;
+  overflow: hidden;      /* evita che qualcosa esca fuori */
+  gap: 5vh;
+  padding: 5vh;
+}
+
+/* Chapter e vertical-column centrati e limitati */
+.chapter, .vertical-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;        /* centra testo e inline elements */
+  width: 100%;
+  max-width: 100%; /* 80% su mobile, max 400px */
+  margin: 0 auto;
+  gap: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+/* Immagini, video e iframe responsivi con object-fit */
+.chapter img,
+.chapter video,
+.chapter iframe,
+.vertical-column img,
+.vertical-column video,
+.vertical-column iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  max-width: clamp(80px, 80vw, 400px); /* mobile-first */
+}
+
+.chapter-title{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  max-width: clamp(80px, 90vw, 1000px); /* mobile-first */
+}
+
+
+/* Testo e form centrati */
+.chapter-text,
+.vertical-column form,
+.vertical-column p,
+.vertical-column h3 {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.chapter > *,
+.vertical-column > * {
+  
+  width: 100%;           /* si adatta al contenitore ma non lo supera */
+  box-sizing: border-box;
+}
+
+.chapter > * img,
+.chapter > * iframe,
+.vertical-column > * img,
+.vertical-column > * iframe {
+  width: 100%;           /* si adatta al contenitore */
+  max-width: 100%;       /* mai più largo dei genitori */
+  height: auto;
+  object-fit: contain;   /* mantiene proporzioni */
+}
+
+/* ===== Chapter ===== */
+
+.chapter-text p{
+    margin-bottom: 1em; /* aggiunge spazio solo ai paragrafi successivi */
+}
+
+/* ===== Mobile first: Chapter dentro Vertical Column o viceversa ===== */
+.chapter > .vertical-column,
+.vertical-column > .chapter {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ============================= */
+/* CIMOSA ORIGINALE              */
+/* ============================= */
+.cimosa {
+  position: fixed;
+  top: 0;
+  left: calc(var(--cimosa-width, 25px) * 0.6); /* offset originale */
+  width: auto;
+  height: 100vh;
+  background-color: var(--cimosa-color, rgba(196,101,45,0.6));
+  color: var(--text-main, #f2f2f2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: var(--fs-cimosa, 0.8rem);
+  font-weight: var(--fw-cimosa, 600);
+  padding: 0.1rem;
+  z-index: 1; /* sotto header e footer come prima */
+}
+
+.cimosa span {
+  transform: rotate(180deg); /* mantiene effetto originale */
+  white-space: nowrap;
+}
+
+  /* ============================= */
+/* FOOTER RIPRISTINATO            */
+/* ============================= */
+footer {
+  font-size: 0.75rem; /* più piccolo */
+  background-color: var(--bg-footer);
+  color: var(--text-dim);
+  text-align: center;
+  padding: 15px 10px; /* leggermente meno padding */
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ============================= */
+/* HEADER         */
+/* ============================= */
+
+header nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* quando attivo */
+header nav.active {
+  display: flex;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 1px;
+}
+
+/* Lista link */
+header nav ul {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Link testo a sinistra, ma allineato su colonna */
+header nav ul li a {
+  display: block;
+  text-align: left;       /* parole allineate a sinistra */
+  padding-left: 0.5rem;   /* spazio tra linea e testo */
+  position: relative;
+}
+
+/* Pallino attivo */
+header nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  left: -12px;            /* fissato a colonna immaginaria */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.hero{
+   margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: var(--hero-brand-size);
+  font-weight: var(--hero-brand-weight);
+}
+.hero h2 {
+  font-size: var(--hero-title-size);       /* dimensione principale */
+  font-weight: var(--hero-title-weight);   /* peso principale */
+  margin: 0;
+   margin-right: 1rem; /* spazio orizzontale se inline */
+  margin-bottom: 0;   /* evita margini verticali indesiderati */                               /* rimuove margini */
+  line-height: 1.2;
+  display: inline;                         /* inline per stare sulla stessa linea */
+}
+
+.hero h3 {
+  font-size: var(--hero-title-size);       /* stessa dimensione di H1 */
+  font-weight: var(--hero-title-weight);   /* stesso peso */
+  margin: 0;
+  line-height: 1.2;
+  display: inline;                         /* inline per stare subito dopo H1 */
+  color: var(--accent);                    /* colore arancione accent */
+}
+
+h1, h2, h3 {
+  color: var(--heading-color);
+  margin: 1em 0 0.5em 0;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* Titoli principali */
+h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+}
+
+/* Titoli secondari */
+h2 {
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+}
+
+/* Titoli terziari */
+h3 {
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+}
+
+/* Responsive per tablet e desktop */
+@media (min-width: 768px) {
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1rem; }
+ .chapter-title h1 {
+  margin: 0 0 0 0;
+    font-size: 3rem; /* modifica a piacere */
+  }
+
+  .hero h1 {
+  font-size: var(--hero-brand-size-L);
+  font-weight: var(--hero-brand-weigh-L);
+}
+.hero h2 {
+  font-size: var(--hero-title-size-L);       /* dimensione principale */
+  font-weight: var(--hero-title-weight-L);   /* peso principale */
+ }
+
+.hero h3 {
+  font-size: var(--hero-title-size-L);       /* stessa dimensione di H1 */
+  font-weight: var(--hero-title-weight-L);   /* stesso peso */
+ 
+}
+
+  .hamburger {
+    display: none;        /* hamburger scompare */
+  }
+
+  header nav {
+    display: flex;        /* nav sempre visibile */
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 0;
+    border-left: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: calc(2 * var(--nav-dot-bottom)); ;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav ul {
+    flex-direction: row;       /* riga */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header nav ul li a.active::after {
+    left: 50%;                /* centro il pallino sotto il link */
+    top: auto;
+    bottom: calc(-1 * var(--nav-dot-bottom, 6px));
+    transform: translateX(-50%);
+  }
+
+   .chapter {
+    flex-direction: row;
+    justify-content: center;   /* crea linea vuota centrale */
+    gap: 10vw;                 /* distanza tra testo e immagine */
+    width: auto;               /* rimane centrato nel main */
+  }
+
+  
+
+  /* zigzag per capitoli pari */
+  .chapter:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .chapter.no-reverse {
+  flex-direction: row !important;
+}
+
+  .chapter img,
+  .chapter video,
+  .chapter iframe,
+  .vertical-column img,
+  .vertical-column video,
+  .vertical-column iframe {
+    max-width: clamp(100px, 60vw, 500px);
+  }
+
+@media (min-width: 1200px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.2rem; }
+  .chapter-title h1 {
+    flex: 1 1 0;
+    font-size: 3.5rem; /* modifica a piacere */
+  }
+
+    .hero h1 {
+  font-size: var(--hero-brand-size-XL);
+  font-weight: var(--hero-brand-weigh-XL);
+  display: block;   /* ora ogni titolo va su riga propria */
+}
+.hero h2 {
+  font-size: var(--hero-title-size-XL);       /* dimensione principale */
+  font-weight: var(--hero-title-weight-XL);   /* peso principale */
+  display: block;   /* ora ogni titolo va su riga propria */
+ }
+
+.hero h3 {
+  font-size: var(--hero-title-size-XL);       /* stessa dimensione di H1 */
+  font-weight: var(--hero-title-weight-XL);   /* stesso peso */
+  display: block;   /* ora ogni titolo va su riga propria */
+ 
+}
+
+
+main .chapter-text,
+main .chapter-video,
+  main .chapter-image {
+    flex: 1 1 0;             /* si ridimensionano se serve */
+    max-width: calc(50% - 5vw); /* lascia metà meno metà gap */
+    box-sizing: border-box;
+  }
+  
+/* Nav centrata */
+header nav {
+  margin: 0 auto;      /* spinge nav al centro */
+  display: flex;
+  justify-content: center; /* centra i link dentro nav */
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* distanza tra link */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+  .chapter {
+    gap: 12vw;                 /* più spazio centrale */
+  }
+
+  .chapter img,
+  .chapter video,
+  .chapter iframe,
+  .vertical-column img,
+  .vertical-column video,
+  .vertical-column iframe {
+    max-width: clamp(120px, 40vw, 600px);
+  
+}
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
