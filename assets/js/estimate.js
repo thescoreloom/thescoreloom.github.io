@@ -4,34 +4,42 @@ const strumentiInput = document.getElementById('strumenti');
 const copyrightInput = document.getElementById('copyright');
 const totaleOutput = document.getElementById('totale');
 
-// --- PARAMETRI RICALIBRATI (Copyright 60€) ---
-const BASE_FISSA = 20;      // Leggermente abbassata per compensare il copyright più alto
-const MOLT_MINUTI = 23;     
-const PESO_STRUMENTI = 18.5; 
-const COSTO_COPYRIGHT = 65; // AGGIORNATO A 60€
-const MINIMO_ASSOLUTO = 50; 
-const MARGINE = 0.35;       // Forbice 35%
+// --- PARAMETRI DI INTERPOLAZIONE RAFFINATI ---
+const BASE_FISSA_ARRANGIAMENTO = 40;
+const COSTO_MINUTO_BASE = 10;
+const COEFFICIENTE_STRUMENTI = 0.6; // Rapporto complessità/tempo
+const MARGINE_FORBICE = 0.25;       // Range ±25%
 
 function calcolaPreventivo() {
   const minuti = parseFloat(minutiInput.value) || 0;
   const strumenti = parseFloat(strumentiInput.value) || 0;
-  const copyright = copyrightInput.checked ? COSTO_COPYRIGHT : 0;
+  const haCopyright = copyrightInput.checked;
 
-  // Formula base
-  let base = BASE_FISSA + (minuti * MOLT_MINUTI);
-  base += (Math.pow(strumenti, 0.6) * PESO_STRUMENTI * (minuti * 0.75));
-  base += copyright;
+  // 1. CALCOLO ARRANGIAMENTO (Senza Copyright)
+  // Formula: Base + (Minuti * 10) + (Strumenti * Minuti * 0.6)
+  let baseSenzaCopyright = BASE_FISSA_ARRANGIAMENTO + (minuti * COSTO_MINUTO_BASE) + (strumenti * minuti * COEFFICIENTE_STRUMENTI);
 
-  // Controllo minimo dignità
-  if (base < MINIMO_ASSOLUTO) base = MINIMO_ASSOLUTO;
+  // 2. CALCOLO COPYRIGHT DINAMICO (Se selezionato)
+  // Formula: 5€ fisso + (1.6€ per strumento) + (5€ per minuto di durata)
+  let costoCopyright = 0;
+  if (haCopyright) {
+    costoCopyright = 5 + (strumenti * 1.6) + (minuti * 5);
+  }
 
-  // Calcolo fascia ±35%
-  const minRange = Math.round(base * (1 - MARGINE));
-  const maxRange = Math.round(base * (1 + MARGINE));
+  // 3. SOMMA TOTALE
+  let baseTotale = baseSenzaCopyright + costoCopyright;
 
-  // Visualizzazione (usa l'ID che preferisci, qui totaleOutput)
+  // 4. CONTROLLO MINIMO DIGNITÀ (50€ come da tua indicazione)
+  if (baseTotale < 50) baseTotale = 50;
+
+  // 5. CALCOLO RANGE ±25%
+  const minRange = Math.round(baseTotale * (1 - MARGINE_FORBICE));
+  const maxRange = Math.round(baseTotale * (1 + MARGINE_FORBICE));
+
+  // 6. VISUALIZZAZIONE SUL SITO
   totaleOutput.textContent = `€${minRange} – €${maxRange}`;
 }
 
+// Collegamento eventi (Input e Caricamento pagina)
 form.addEventListener('input', calcolaPreventivo);
 window.addEventListener('load', calcolaPreventivo);

@@ -121,7 +121,6 @@ justify-content: flex-start; /* contenuto in alto */
   aside.sidebar .vertical-column {
     width: 100%;
     max-width: 1000px; /* Allinea il limite a quello del main */
-    gap: 40px;
   }
 /* sidebar anche lei row */
 
