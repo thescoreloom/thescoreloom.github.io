@@ -25,6 +25,48 @@
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/utilities.css">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "name": "TheScoreLoom",
+        "@id": "https://thescoreloom.it/#organization",
+        "logo": "https://thescoreloom.it/assets/images/logo.png",
+        "email": "info@thescoreloom.it",
+        "@type": "Organization",
+        "url": "https://thescoreloom.it/"
+      },
+      {
+        "publisher": { "@id": "https://thescoreloom.it/#organization" },
+        "url": "https://thescoreloom.it/",
+        "name": "TheScoreLoom",
+        "@id": "https://thescoreloom.it/#website",
+        "@type": "WebSite"
+      },
+      {
+        "isPartOf": { "@id": "https://thescoreloom.it/#website" },
+        "name": "Home",
+        "@id": "https://thescoreloom.it/en/index.html#webpage",
+        "@type": "WebPage",
+        "url": "https://thescoreloom.it/en/index.html",
+        "inLanguage": "en"
+      },
+      {
+        "itemListElement": [
+          {
+            "position": 1,
+            "name": "Home",
+            "item": "https://thescoreloom.it/en/index.html",
+            "@type": "ListItem"
+          }
+        ],
+        "@id": "https://thescoreloom.it/en/index.html#breadcrumb",
+        "@type": "BreadcrumbList"
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-page="Home">
   <div class="background-parallax"></div>
