@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Root -->
+  <url>
+    <loc>https://thescoreloom.it/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/index.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Home IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/index.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Home EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/index.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Project IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/project.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/project.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/project.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/project.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/project.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/project.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/project.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/project.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Scores IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/scores.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/scores.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/scores.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/scores.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Scores EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/scores.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/scores.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/scores.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/scores.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Estimate IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/estimate.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/estimate.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/estimate.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/estimate.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Estimate EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/estimate.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/estimate.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/estimate.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/estimate.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/contact.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/contact.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/faq.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/faq.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Allievi IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/allievi.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/allievi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/allievi.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/allievi.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Allievi EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/allievi.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/allievi.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/allievi.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/allievi.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Privacy IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/privacy.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Privacy EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/privacy.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Cookies IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/cookies.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Cookies EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/cookies.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms IT -->
+  <url>
+    <loc>https://thescoreloom.it/it/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/terms.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms EN -->
+  <url>
+    <loc>https://thescoreloom.it/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thescoreloom.it/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://thescoreloom.it/it/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thescoreloom.it/en/terms.html" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

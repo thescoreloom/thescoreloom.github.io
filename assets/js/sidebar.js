@@ -24,7 +24,7 @@ async function loadSidebar() {
              </div>`;
       } else if (item.audio && item.audio.trim() !== "") {
         mediaHtml = `
-          <audio controls class="mini-audio-player" style="width: 100%;">
+          <audio controls preload="none" class="mini-audio-player" style="width: 100%;">
             <source src="${item.audio}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>`;
@@ -46,7 +46,7 @@ async function loadSidebar() {
 
           <div class="chapter">
             <div class="chapter-image">
-              <img src="${item.image}" alt="${item.title}">
+              <img src="${item.image}" alt="${item.title}" loading="lazy">
             </div>
             <div class="chapter-text">
               ${mediaHtml}
