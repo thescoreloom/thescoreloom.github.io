@@ -28,10 +28,24 @@
     "scoreLink": "https://www.sheetmusicdirect.com/se/ID_No/1975175/Product.aspx"
   },
   {
-    "title": "Demasiado Corazon",
-    "image": "assets/sidebar/Demasiado_Corazon.png",
-    "audio": "assets/sidebar/Demasiado_Corazon.mp3",
+    "title": "DISCO BAMBINA",
+    "image": "assets/sidebar/DISCO_BAMBINA.png",
+    "audio": "assets/sidebar/DISCO_BAMBINA.mp3",
     "youtube": "",
-    "scoreLink": "https://it.sheetmusicdirect.com/se/ID_No/2070787/Product.aspx"
+    "scoreLink": "https://it.sheetmusicdirect.com/se/ID_No/2126493/Product.aspx"
+  },
+  {
+    "title": "NON VOGLIO MICA LA LUNA",
+    "image": "assets/sidebar/NON_VOGLIO_MICA_LA_LUNA.png",
+    "audio": "assets/sidebar/NON_VOGLIO_MICA_LA_LUNA.mp3",
+    "youtube": "",
+    "scoreLink": "https://www.sheetmusicplus.com/en/product/non-voglio-mica-la-luna-23950839.html"
+  },
+  {
+    "title": "PLAY OUR LOVE'S THEME",
+    "image": "assets/sidebar/PLAY_OUR_LOVE'S_THEME.png",
+    "audio": "assets/sidebar/PLAY_OUR_LOVE'S_THEME.mp3",
+    "youtube": "",
+    "scoreLink": "https://it.sheetmusicdirect.com/se/ID_No/2108334/Product.aspx"
   }
 ]
