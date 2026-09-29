@@ -52,6 +52,59 @@
   max-width: 600px;
 }
   </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thescoreloom.it/#organization",
+      "name": "TheScoreLoom",
+      "url": "https://thescoreloom.it/",
+      "logo": "https://thescoreloom.it/assets/images/logo.png",
+      "email": "info@thescoreloom.it"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thescoreloom.it/#website",
+      "url": "https://thescoreloom.it/",
+      "name": "TheScoreLoom",
+      "publisher": {
+        "@id": "https://thescoreloom.it/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thescoreloom.it/en/estimate.html#webpage",
+      "url": "https://thescoreloom.it/en/estimate.html",
+      "name": "Estimate",
+      "isPartOf": {
+        "@id": "https://thescoreloom.it/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thescoreloom.it/en/estimate.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thescoreloom.it/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Estimate",
+          "item": "https://thescoreloom.it/en/estimate.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body data-page="Estimate">
     <div class="background-parallax"></div>

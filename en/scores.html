@@ -43,6 +43,60 @@
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/utilities.css">
 
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thescoreloom.it/#organization",
+      "name": "TheScoreLoom",
+      "url": "https://thescoreloom.it/",
+      "logo": "https://thescoreloom.it/assets/images/logo.png",
+      "email": "info@thescoreloom.it"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thescoreloom.it/#website",
+      "url": "https://thescoreloom.it/",
+      "name": "TheScoreLoom",
+      "publisher": {
+        "@id": "https://thescoreloom.it/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thescoreloom.it/en/scores.html#webpage",
+      "url": "https://thescoreloom.it/en/scores.html",
+      "name": "Score Types & Services",
+      "description": "Overview of the three types of wind band arrangements offered: Ready to Play catalog scores, Tailored custom scores, and Bespoke exclusive commissions.",
+      "isPartOf": {
+        "@id": "https://thescoreloom.it/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thescoreloom.it/en/scores.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thescoreloom.it/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Scores",
+          "item": "https://thescoreloom.it/en/scores.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body data-page="Scores">
   <div class="background-parallax"></div>

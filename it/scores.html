@@ -39,6 +39,60 @@
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/utilities.css">
 
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thescoreloom.it/#organization",
+      "name": "TheScoreLoom",
+      "url": "https://thescoreloom.it/",
+      "logo": "https://thescoreloom.it/assets/images/logo.png",
+      "email": "info@thescoreloom.it"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thescoreloom.it/#website",
+      "url": "https://thescoreloom.it/",
+      "name": "TheScoreLoom",
+      "publisher": {
+        "@id": "https://thescoreloom.it/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thescoreloom.it/it/scores.html#webpage",
+      "url": "https://thescoreloom.it/it/scores.html",
+      "name": "Tipologie di Spartiti",
+      "description": "Presentazione delle tre tipologie di spartiti e arrangiamenti per banda: brani a catalogo Ready to Play, partiture su misura Tailored e composizioni esclusive Bespoke.",
+      "isPartOf": {
+        "@id": "https://thescoreloom.it/#website"
+      },
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thescoreloom.it/it/scores.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thescoreloom.it/it/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Spartiti",
+          "item": "https://thescoreloom.it/it/scores.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body data-page="Scores">
   <div class="background-parallax"></div>
